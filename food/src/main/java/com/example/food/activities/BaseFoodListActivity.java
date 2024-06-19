@@ -1,5 +1,7 @@
 package com.example.food.activities;
 
+import android.content.SharedPreferences;
+import android.content.pm.ApplicationInfo;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
@@ -31,6 +33,7 @@ public abstract class BaseFoodListActivity extends AppCompatActivity implements 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        storeAppOpen();
         Toolbar toolbar = findViewById(R.id.toolbar);
         toolbar.setTitle(getToolbarTitle());
         recyclerView = findViewById(R.id.recyclerview);
@@ -59,6 +62,25 @@ public abstract class BaseFoodListActivity extends AppCompatActivity implements 
         });
 
         fetchFood(this);
+    }
+
+    private void storeAppOpen() {
+        SharedPreferences sharedPreferences = getSharedPreferences(getSharedPrefFileName(), MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        int count = sharedPreferences.getInt("app_start_count", 0);
+        editor.putInt("app_start_count", ++count);
+        editor.apply();
+        Toast.makeText(this, getName() + " " + count, Toast.LENGTH_SHORT).show();
+    }
+
+    private String getName(){
+        ApplicationInfo applicationInfo = this.getApplicationInfo();
+        int stringRes = applicationInfo.labelRes;
+        return getString(stringRes);
+    }
+
+    protected String getSharedPrefFileName() {
+        return "my_pref";
     }
 
     protected String getToolbarTitle(){

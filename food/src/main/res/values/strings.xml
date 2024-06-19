@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">FruitApp</string>
+    <string name="SUGAR_btn" >Sugar</string>
+    <string name="PROTEIN_btn" >Protein</string>
+    <string name="CALORIES_btn" >Calories</string>
+    <string name="RESET_btn" >Reset</string>
+    <string name="sort_by_none">Sort By : None</string>
+    <string name="sort_by">Sort By : %1$s</string>
+    <string name="protein">Protein</string>
+    <string name="sugar">Sugar</string>
+    <string name="calories">Calories</string>
+
+
+</resources>

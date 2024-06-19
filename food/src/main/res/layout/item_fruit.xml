@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:minWidth="150dp"
+    android:layout_margin="8dp"
+    android:padding="16dp"
+    android:gravity="center"
+    android:background="#F68C84"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/foodTitletv"
+        android:layout_width="wrap_content"
+        android:text="Apricot"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:text="Sugar: 15"
+        android:id="@+id/foodSugarTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:text="Protein: 15"
+        android:id="@+id/foodProteinTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:text="Calories: 15"
+        android:id="@+id/foodCaloriesTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

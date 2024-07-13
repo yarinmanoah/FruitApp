@@ -7,8 +7,6 @@ import com.example.fruitapp.R;
 
 
 public class FruitsActivity extends BaseFoodListActivity {
-
-
     @Override
     public void fetchFood(OnFoodReadyCallback callback) {
         FruitJsonTask fruitJsonTask = new FruitJsonTask(callback);
